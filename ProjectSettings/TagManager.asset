@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bird
+  - Bomb
   layers:
   - Default
   - TransparentFX
@@ -50,6 +52,6 @@ TagManager:
   - name: Platform
     uniqueID: 291310243
     locked: 0
-  - name: 
+  - name: UI
     uniqueID: 1787293435
     locked: 0
