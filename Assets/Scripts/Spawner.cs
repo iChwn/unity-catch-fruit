@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
             Instantiate(
                 birds[randomBird],
                 new Vector2(Random.Range(-xBounds, xBounds), yBound),
-                Quaternion.identity
+                Quaternion.Euler(0,0,-90)
             );
         } else {
             Instantiate(
@@ -33,11 +33,5 @@ public class Spawner : MonoBehaviour
         }
 
         StartCoroutine(SpawnRandomGameObject());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

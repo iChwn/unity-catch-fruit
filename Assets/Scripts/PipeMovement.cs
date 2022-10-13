@@ -18,14 +18,20 @@ public class PipeMovement : MonoBehaviour
     void Update()
     {
         float xAxis = Input.GetAxis("Horizontal");
-        print(xAxis);
+        // print(xAxis);
         
         myBody.velocity = Vector2.zero;
-        if(xAxis > 0) {
-            myBody.velocity = Vector2.right * speed;
-        } else if(xAxis < 0) {
+        if (Input.GetKey("a")) {
             myBody.velocity = Vector2.left * speed;
+        }  
+        if(Input.GetKey("d")) {
+            myBody.velocity = Vector2.right * speed;
         }
+        // if(xAxis > 0) {
+        //     myBody.velocity = Vector2.right * speed;
+        // } else if(xAxis < 0) {
+        //     myBody.velocity = Vector2.left * speed;
+        // }
 
         transform.position = new Vector2(
             Mathf.Clamp(transform.position.x, -xBound, xBound),

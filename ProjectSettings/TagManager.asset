@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bird
   - Bomb
+  - PipeHole
+  - PipeSideCollider
   layers:
   - Default
   - TransparentFX

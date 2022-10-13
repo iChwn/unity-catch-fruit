@@ -18,16 +18,18 @@ public class ScoreController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D target)
     {
-        if(target.tag == "Bomb") {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        bool objectTag = gameObject.CompareTag("PipeHole");
+        if(objectTag && target.tag == "Bomb") {
+           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }   
     }
 
     void OnTriggerExit2D(Collider2D target)
     {
-        if(target.tag == "Bird") {
+        bool objectTag = gameObject.CompareTag("PipeHole");
+        if(objectTag && target.tag == "Bird") {
             Destroy(target.gameObject);
             score++;
         }   
-    }
+    } 
 }
