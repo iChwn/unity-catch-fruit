@@ -7,8 +7,13 @@ using UnityEngine.SceneManagement;
 public class ScoreController : MonoBehaviour
 {
 
+    public GameOverScreen GameOverScreen;
     public Text scoreText;
     private int score;
+
+    public void GameOver() {
+        GameOverScreen.Setup(score);
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,7 +25,9 @@ public class ScoreController : MonoBehaviour
     {
         bool objectTag = gameObject.CompareTag("PipeHole");
         if(objectTag && target.tag == "Bomb") {
-           SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameOver();
+            Time.timeScale = 0;
         }   
     }
 
