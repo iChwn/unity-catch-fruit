@@ -37,6 +37,10 @@ public class ScoreController : MonoBehaviour
         if(objectTag && target.tag == "Bird") {
             Destroy(target.gameObject);
             score++;
+
+            if(score > PlayerPrefs.GetInt("HighScore", 0)) {
+                PlayerPrefs.SetInt("HighScore", score);
+            }
         }   
     } 
 }

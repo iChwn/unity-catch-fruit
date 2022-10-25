@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Text highscore;
     // Start is called before the first frame update
-    // void Start()
-    // {
-    //     gameObject.GetComponent<Button>().onClick.AddListener(StartGame);
-    // }
+    void Start()
+    {
+        highscore.text = "HIGHSCORE: " + PlayerPrefs.GetInt("HighScore", 0).ToString();
+    }
 
     public void StartGame () {
         SceneManager.LoadScene("GameScene");
