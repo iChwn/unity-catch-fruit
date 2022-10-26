@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BlueBirdMovement : MonoBehaviour
 {
-    private float freq = 1.0f;
-    private float amp = 5.0f;
-    private float cycleSpeed = 1.0f;
+    private float freq = 6f;
+    private float amp = .8f;
+    private float cycleSpeed = 4f;
     private Vector3 pos;
     private Vector3 axis;
 
